@@ -33,5 +33,27 @@ class TestRegexExercses(unittest.TestCase):
 
         self.assertFalse(result)
 
+    def test_exercise_three_3(self):
+        test = "example@examplecom"
+        result = regExExerciseThree(test)
+
+        self.assertFalse(result)
+        
+    def test_exercise_three_4(self):
+        test = "example@example.comm"
+        result = regExExerciseThree(test)
+
+        self.assertFalse(result)
+        
+    def test_exercise_three_5(self):
+        test = "@example.com"
+        result = regExExerciseThree(test)
+        
+    def test_exercise_three_6(self):
+        test = "example@example."
+        result = regExExerciseThree(test)
+
+        self.assertFalse(result)
+        
 if __name__ == '__main__':
     unittest.main()
