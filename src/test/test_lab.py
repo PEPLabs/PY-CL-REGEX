@@ -15,7 +15,6 @@ class TestRegexExercses(unittest.TestCase):
 
         self.assertEqual(len(re.findall(r'\d', test)), len(re.findall(r'X', result)))
 
-
     def test_exercise_two_two(self):
         test = "my phone number is 323-348-2384"
         result = regExExerciseTwo(test)
