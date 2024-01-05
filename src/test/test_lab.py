@@ -1,7 +1,7 @@
 import unittest
 import re
 from src.main.lab import regExExerciseOne, regExExerciseTwo, regExExerciseThree
-class TestRegexExercses(unittest.TestCase):
+class TestRegexExercises(unittest.TestCase):
     def test_exercise_one(self):
         test1 = "Alice has 3 apples, Bob has 5 oranges, and Charlie has 2 bananas. David has 8 grapes, and Emily has 4 peaches."
         result1 = regExExerciseOne(test1)
