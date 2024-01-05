@@ -1,9 +1,15 @@
 import re
 
 """
-Regular expressions, often referred to as regex, are powerful tools for pattern matching and text manipulation. They provide a concise and flexible way to describe and match patterns within strings. Regular expressions are widely used in various programming languages and are particularly useful for tasks such as data validation, searching, and text processing.
+Regular expressions, often referred to as regex, are powerful tools for pattern matching and text 
+manipulation. They provide a concise and flexible way to describe and match patterns within strings. 
+Regular expressions are widely used in various programming languages and are particularly useful for 
+tasks such as data validation, searching, and text processing.
 
-Regular expressions offer a versatile and efficient way to handle textual data. They enable programmers to define complex search patterns, making it easier to locate, extract, or manipulate specific information within strings. Whether you're validating user input, searching for specific patterns in a document, or extracting data from a large dataset, regular expressions can significantly streamline these tasks.
+Regular expressions offer a versatile and efficient way to handle textual data. They enable programmers 
+to define complex search patterns, making it easier to locate, extract, or manipulate specific information 
+within strings. Whether you're validating user input, searching for specific patterns in a document, or 
+extracting data from a large dataset, regular expressions can significantly streamline these tasks.
 """
 # This function demonstrates the basic usage of RegEx in python.
 # DO NOT edit this function
@@ -12,7 +18,8 @@ def regExFunctions():
     text = "In this forest, there are many animals. This morning, I already saw five dogs, two cats, and one coyote. The dogs were frolicking in the meadow."
 
     # Define a pattern
-    # In this case we are matching all occurences of "dog"
+    # In this case we are matching all occurences of "dogs"
+    # raw strings (r before string) are common for regex expressions: they don't handle escaped characters
     pattern = r"dogs"
 
     # re.search() methods return the first occurence of the match
@@ -25,17 +32,21 @@ def regExFunctions():
     print('re.findall: ', all_matches)
 
     # Use re.sub() to replace matched patterns
-    replacement = "foxes"
+    replacement = r"foxes"
     modified_text = re.sub(pattern, replacement, text)
     print('re.sub: ', modified_text)
 
-"""
-TODO: Complete this function so that it finds and replace all "has" with "owns"
-Example: Alice has 3 apples, Bob has 5 oranges, and Charlie has 2 bananas. David has 8 grapes, and Emily has 4 peaches.
-Output: Alice owns 3 apples, Bob owns 5 oranges, and Charlie owns 2 bananas. David owns 8 grapes, and Emily owns 4 peaches."
-"""
-def regExExerciseOne(input_text):
 
+def regExExerciseOne(input_text):
+    """
+    TODO: Complete this function so that it finds and replace all "has" with "owns"
+
+    Example: Alice has 3 apples, Bob has 5 oranges, and Charlie has 2 bananas. David has 8 grapes, 
+            and Emily has 4 peaches.
+            
+    Output: Alice owns 3 apples, Bob owns 5 oranges, and Charlie owns 2 bananas. David owns 8 grapes, 
+            and Emily owns 4 peaches."
+    """
     pattern = r""
     replacement = ""
     modified_text = input_text
@@ -62,11 +73,10 @@ Some commonly used character classes have shorthands.
 - `\s` == whitespaces
 """
 
-"""
-TODO: Complete this function so that it finds all numbers and replace with the letter 'X'
-"""
-def regExExerciseTwo(input_text):
 
+
+def regExExerciseTwo(input_text):
+    # TODO: Complete this function so that it finds all numbers and replaces them with the letter 'X'
     pattern = r""
     replacement = ""
     modified_text = input_text
@@ -93,21 +103,24 @@ Matches 2 or more a's
 pattern = r"a{2,}"
 """
 
-"""
-TODO: This time we will build a simple email validator. Complete the function so that it returns True if the input string is of the following pattern: string@string.xxx, that is, a 1 or more characters of string followed by "@" symbol, followed by 1 or more characters, followed by ".", then followed by max 3 characters.
-
-Example:
-example@example.com 
-Outcome:
-True
-
-Example2:
-aweih@eiwhwoih.
-Outcome:
-False, as it doesn't contain characters following "." symbol.
-"""
 def regExExerciseThree(input_string):
+    """
+    TODO: This time we will build a simple email validator. Complete the function so that it returns 
+          True if the input string is of the following pattern: string@string.xxx, that is, one or more 
+          string followed by "@" symbol, followed by 1 or more string again, followed by ".", then 
+          followed by a one to three character string. All strings should be lowercase, uppercase, and/or
+          numeric characters only
 
+    Example:
+    example@example.com 
+    Outcome:
+    True
+
+    Example2:
+    aweih@eiwhwoih.
+    Outcome:
+    False, as it doesn't contain characters following "." symbol.
+    """
     pattern = r""
 
-    return False
+    return None
