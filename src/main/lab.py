@@ -45,7 +45,7 @@ def regExExerciseOne(input_text):
 """
 Character Classes:
 You can match multiple characters by listing them inside the hard bracket '[ ]'. The following pattern will match characters 'a', 'e', 'i', 'o', and 'u'
-```python
+
 pattern = r"[aeiou]"
 text = "hello, world!"
 
@@ -55,7 +55,7 @@ print(matches) # ['e', 'o', 'o', 'e', 'o']
 
 pattern = r"[A-Z]" #Matches all uppercase alphabet
 pattern = r"[A-Za-z0-9]" #Matches all alphanumeric
-```    
+
 Some commonly used character classes have shorthands. 
 - `\d`== `[0-9]`
 - `\w` == `[A-Za-z]`
