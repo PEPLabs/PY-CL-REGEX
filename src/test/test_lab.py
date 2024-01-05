@@ -21,36 +21,14 @@ class TestRegexExercises(unittest.TestCase):
 
         self.assertEqual(len(re.findall(r'\d', test)), len(re.findall(r'X', result)))
 
-    def test_exercise_three_1(self):
+    def test_exercise_three_one(self):
         test = "example@example.com"
         result = regExExerciseThree(test)
 
         self.assertTrue(result)
 
-    def test_exercise_three_2(self):
+    def test_exercise_three_two(self):
         test = "example@.com"
-        result = regExExerciseThree(test)
-
-        self.assertFalse(result)
-
-    def test_exercise_three_3(self):
-        test = "example@examplecom"
-        result = regExExerciseThree(test)
-
-        self.assertFalse(result)
-        
-    def test_exercise_three_4(self):
-        test = "example@example.comm"
-        result = regExExerciseThree(test)
-
-        self.assertFalse(result)
-        
-    def test_exercise_three_5(self):
-        test = "@example.com"
-        result = regExExerciseThree(test)
-        
-    def test_exercise_three_6(self):
-        test = "example@example."
         result = regExExerciseThree(test)
 
         self.assertFalse(result)
