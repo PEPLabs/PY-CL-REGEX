@@ -1,0 +1,35 @@
+{
+  "type": "python",
+  "testFiles": [
+    {
+      "path": "src/test/lab_test.py",
+      "testCases": [
+        {
+          "methodName": "test_exercise_one",
+          "label": "Verify regExExerciseOne replaces occurrences of 'has' with 'owns'",
+          "description": "Checks that the number of times 'has' appears in the original string matches the number of times 'owns' appears in the transformed output."
+        },
+        {
+          "methodName": "test_exercise_two_one",
+          "label": "Verify regExExerciseTwo replaces digits with 'X' (case 1)",
+          "description": "Ensures all numeric digits in a sentence are replaced with 'X' by comparing digit count to replacement count."
+        },
+        {
+          "methodName": "test_exercise_two_two",
+          "label": "Verify regExExerciseTwo replaces digits with 'X' (case 2)",
+          "description": "Verifies that digits in phone numbers are replaced with 'X' consistently, matching digit count to number of 'X' characters returned."
+        },
+        {
+          "methodName": "test_exercise_three_one",
+          "label": "Verify regExExerciseThree validates correct email format",
+          "description": "Checks that a valid email address returns True."
+        },
+        {
+          "methodName": "test_exercise_three_two",
+          "label": "Verify regExExerciseThree rejects invalid email format",
+          "description": "Checks that an invalid email address returns False."
+        }
+      ]
+    }
+  ]
+}
